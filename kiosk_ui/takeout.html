@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -71,7 +72,7 @@
   }
 
   #eatherebtn {
-    background-image: url(먹고가기.png);
+    background-image: url(eathere.png);
     background-position: center;
     background-position-y: 50px;
     background-size: 180px;
@@ -82,7 +83,7 @@
   }
 
   #takeoutbtn {
-    background-image: url(포장하기.png);
+    background-image: url(takeout.png);
     background-position: center;
     background-position-y: 50px;
     background-size: 180px;
@@ -108,10 +109,22 @@
   }
 
   table{
-    margin-left:12%;
+    margin-left:5%;
     width:100%;
+    border: 3px solid orange;
   }
 
+  #bestburger1{
+    margin-left:50px;
+  }
+
+  #bestburger2{
+    margin-left:40px;
+  }
+
+  #bestburger3{
+    margin-left:50px;
+  }
 
 
 </style>
@@ -119,7 +132,7 @@
 <body>
   <!-- header -->
   <div class="jumbotron text-center mb-0">
-    <img src="컴스터치.png" width="40%" height="30%">
+    <img src="comstouch.png" width="40%" height="30%">
     <h2>사랑과 정성으로!</h2>
 
   </div>
@@ -155,15 +168,21 @@
     <table>
   <thead>
     <tr>
-      <th width="33%">싸이버거</th><th width="33%">디럭스불고기버거</th><th width="33%">통새우버거</th>
+      <th width="33%"><img src="menuimage/cyburger.jpg" width=200 height=200></th>
+      <th width="33%"><img src="menuimage/buldelux.jpg" width=200 height=200></th>
+      <th width="33%"><img src="menuimage/shrimp.jpg" width=200 height=200></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>Lorem</td><td>Ipsum</td><td>Dolor</td>
+        <td><input type="button" id="bestburger1" class="btn btn-outline-danger" value="싸이버거 바로주문"></td>
+        <td><input type="button" id="bestburger2" class="btn btn-outline-danger" value="디럭스불고기버거 바로주문"></td>
+        <td><input type="button" id="bestburger3" class="btn btn-outline-danger" value="통새우버거 바로주문"></td>
+
     </tr>
   </tbody>
 </table>
+
 
   </div>
   <!-- <div class="b-container">
