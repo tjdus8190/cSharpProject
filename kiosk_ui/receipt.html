@@ -23,59 +23,139 @@
 </head>
 
 <style>
-    body {
-        margin-left: 20%;
-        margin-right: 20%;
-        font-family: "배달의민족 한나는 열한살";
+body {
+    margin-left: 20%;
+    margin-right: 20%;
+    font-family: "배달의민족 한나는 열한살";
 
-    }
+}
 
 
-    .container {
-        height: 1200px;
-    }
+.container {
+    height: 1200px;
+}
 
-    .btn-border {
-        border-radius: 30px;
-        border: 50px;
-        height: 70px;
-        width: 300px;
-        font-size: 30px;
-    }
+.btn-border {
+    border-radius: 30px;
+    border: 50px;
+    height: 70px;
+    width: 300px;
+    font-size: 30px;
+}
 
-    .mainbtn {
-        height: 1200px;
-    }
+.mainbtn {
+    height: 1200px;
+}
 
-    .normal {
-        float: left;
-        padding: 500px;
-    }
+.normal {
+    float: left;
+    padding: 500px;
+}
 
-    .senior {
-        float: right;
-        padding: 500px;
-    }
+.senior {
+    float: right;
+    padding: 500px;
+}
 
-    .carousel-inner img {
-        width: 100%;
-        height: 1000px;
-    }
+/* table {
+    width: 100%;
+    border: 1px solid #000000;
+}
+*/
+table tbody>td {
+    border: 1px solid #000000;
+    text-align: center;
+}
 
-    table {
-        width: 100%;
-        border: 1px solid #000000;
-    }
+thead>th {
+    border: 1px solid #000000;
+    text-align: center;
+}
+tr {text-align: center;}
+td {
+    width: 25%;
+    height: 25%;
+    padding: 10px;
+    text-align: center;
+}
 
-    th,
-    td {
-        border: 1px solid #000000;
-        text-align: center;
-    }
+.pagination {
+    justify-content: center;
+}
 
-    h2{
-      color:orange;
-    }
+.navbar {
+    background-color: #EEEEF0;
+}
+
+/* Navigation links */
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* The subnavigation menu */
+.subnav {
+    float: left;
+    overflow: hidden;
+}
+
+/* Subnav button */
+.subnav .subnavbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: rgb(0, 0, 0);
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+/* Add a red background color to navigation links on hover */
+.navbar a:hover,
+.subnav:hover .subnavbtn {
+    background-color: #28C35E;
+}
+
+/* Style the subnav content - positioned absolute */
+.subnav-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    background-color: #28C35E;
+    width: 100%;
+    z-index: 1;
+}
+
+/* Style the subnav links */
+.subnav-content a {
+    float: left;
+    color: white;
+    text-decoration: none;
+}
+
+/* Add a grey background color on hover */
+.subnav-content a:hover {
+    background-color: #eee;
+    color: black;
+}
+
+/* When you move the mouse over the subnav container, open the subnav content */
+.subnav:hover .subnav-content {
+    display: block;
+}
+
+h4{
+  color:orange;
+}
+
+h2{
+  color:orange;
+}
 </style>
 
 <body>
@@ -98,14 +178,14 @@
 
                 <!-- Modal Header -->
                 <div class="modal-header">
-                    <h4 class="modal-title">결제하기</h4>
+                    <h4 class="modal-title">주문확인서</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
 
                 <!-- Modal body -->
                 <div class="modal-body">
                     <div>
-                        <table>
+                        <table id="modaltable" style="width: 100%; border: 1px solid #949494;">
                             <thead>
                                 <tr style="text-align: center">
                                     <th>제품명</th>
@@ -114,36 +194,48 @@
                                     <th>변경</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody style="width: 100%; border: 1px solid #949494;">
                                 <tr>
                                     <td>　</td>
                                     <td>　</td>
                                     <td>　</td>
-                                    <td>　</td>
+                                    <td><button class="btn btn-danger">삭제하기</button></td>
                                 </tr>
                                 <tr>
                                     <td>　</td>
                                     <td>　</td>
                                     <td>　</td>
-                                    <td>　</td>
+                                    <td><button class="btn btn-danger">삭제하기</button></td>
                                 </tr>
                                 <tr>
                                     <td>　</td>
                                     <td>　</td>
                                     <td>　</td>
-                                    <td>　</td>
+                                    <td><button class="btn btn-danger">삭제하기</button></td>
                                 </tr>
                                 <tr>
                                     <td>　</td>
                                     <td>　</td>
                                     <td>　</td>
-                                    <td>　</td>
+                                    <td><button class="btn btn-danger">삭제하기</button></td>
                                 </tr>
                                 <tr>
                                     <td>　</td>
                                     <td>　</td>
                                     <td>　</td>
+                                    <td><button class="btn btn-danger">삭제하기</button></td>
+                                </tr>
+                                <tr>
                                     <td>　</td>
+                                    <td>　</td>
+                                    <td>　</td>
+                                    <td><button class="btn btn-danger">삭제하기</button></td>
+                                </tr>
+                                <tr>
+                                    <td>　</td>
+                                    <td>　</td>
+                                    <td>　</td>
+                                    <td><button class="btn btn-danger">삭제하기</button></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -152,20 +244,11 @@
 
                 <!-- Modal footer -->
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-success" data-dismiss="modal">결제하기</button>
+                    <button type="button" class="btn btn-success" data-dismiss="#dim-layer">결제하기</button>
                 </div>
-
             </div>
         </div>
     </div>
-
-    <!-- footer -->
-    <div class="jumbotron text-center mt-5 mb-0">
-        <h3 class="text-secondary">COM'S TOUCH</h3>
-        <p>Com's touch loves <span class="text-primary">everyone!</span><br> Designed by <span
-                class="text-primary">Seoyeon</span></p>
-    </div>
-
 
 </body>
 
